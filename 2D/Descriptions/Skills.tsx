@@ -1,6 +1,6 @@
 export const SkillsMarkup = (
   <>
-    <h1>Skills 💪</h1>
+    <h1>Skills</h1>
     <ul>
       <li>Proficient</li>
       <ul className='column-two'>
@@ -25,6 +25,7 @@ export const SkillsMarkup = (
         <li>UI/UX</li>
         <li>Firebase</li>
         <li>Nodejs</li>
+        <li>NextJS</li>
       </ul>
       <li>Basic</li>
       <ul className='column-two'>

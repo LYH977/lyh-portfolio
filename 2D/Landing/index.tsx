@@ -23,9 +23,12 @@ const Landing = (props: any) => {
             className={ `logo-container${isAnimating ? ' logo-container-anim' : ''
               }` }
           >
-            <div className='logo-L'></div>
-            <div className='logo-Y'></div>
-            <div className='logo-H'></div>
+            <div className={ `logo-L ${isAnimating ? ' logo-fadeout' : ''
+              }` }></div>
+            <div className={ `logo-Y ${isAnimating ? ' logo-fadeout' : ''
+              }` }></div>
+            <div className={ `logo-H ${isAnimating ? ' logo-fadeout' : ''
+              }` }></div>
             <div className='logo-eye'>
               <div className={ `circle${isAnimating ? ' circle-anim' : ''}` }>
                 <div className='triangle'></div>
@@ -35,6 +38,8 @@ const Landing = (props: any) => {
             </div>
           </div>
         </div>
+
+
         <div className='bottom-section'>
           { isReadyToExplore ? (
             <button
@@ -45,8 +50,11 @@ const Landing = (props: any) => {
               Explore now!
             </button>
           ) : (
-            <div className='progress-bar'></div>
-          ) }
+            <div>
+              <p className='progress-text'>Loading</p>
+              <div className='progress-bar'></div>
+
+            </div>) }
         </div>
       </div>
     </div>

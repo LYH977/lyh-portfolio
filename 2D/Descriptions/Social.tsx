@@ -1,6 +1,6 @@
 export const SocialMarkup = (
   <>
-    <h1>About 🔍</h1>
+    <h1>About</h1>
     <ul>
       <li>
         <a target='_blank' href='https://www.linkedin.com/in/leeyuanhooi/'>
@@ -9,7 +9,7 @@ export const SocialMarkup = (
       </li>
       <li>
         <a target='_blank' href='https://drive.google.com/drive/folders/1KTx2XUDSkF7p7cxiUZgh6E7pS0fP_Bkl?usp=share_link'>
-          Resume
+          Resume (Google Drive Link)
         </a>
       </li>
       <li>

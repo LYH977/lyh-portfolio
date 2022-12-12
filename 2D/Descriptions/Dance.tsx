@@ -1,13 +1,13 @@
 export const DanceMarkup = (
   <>
-    <h1>Dancing 🕺 </h1>
+    <h1>Dancing</h1>
     <p>
       I love dancing and I have fun dancing in sync
       with the music and beat.
     </p>
     <p>
       Among all the dancing categories, Kpop and Michael-Jackson style are my
-      favourite categories.
+      favorite categories.
     </p>
     <p>
       This dance{ ' ' }

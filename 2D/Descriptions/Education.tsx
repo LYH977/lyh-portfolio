@@ -1,14 +1,14 @@
 export const EducationMarkup = (
   <>
-    <h1>Education & Awards 🎓</h1>
+    <h1>Education & Awards</h1>
     <ul>
       <li>University of Science, Malaysia (USM)</li>
       <ul>
         <li>Bachelor of Computer Science (Honors)</li>
-        <li>Major in Software Engieering</li>
+        <li>Major in Software Engineering</li>
         <li className='star-bullet'>CGPA 3.79/4.00</li>
         <li className='award-bullet'>Final Year Gold Medal Award</li>
-        <li className='award-bullet'>First Class Honour</li>
+        <li className='award-bullet'>First Class Honor</li>
         <li className='award-bullet'>Dean's List Awards</li>
         <li className='award-bullet'>Full OCBC Bank Scholarship</li>
       </ul>

@@ -1,6 +1,6 @@
 export const CreditsMarkup = (
     <>
-        <h1>List of Credits  </h1>
+        <h1>List of Credits</h1>
         <p>Big shoutout to authors who provide these amazing 3D models in <a target='_blank' href='https://sketchfab.com/'>SketchFeb</a></p>
         <ul>
 

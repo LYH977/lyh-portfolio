@@ -1,6 +1,6 @@
 export const NarutoMarkup = (
   <>
-    <h1>Naruto 🐱‍👤</h1>
+    <h1>Naruto</h1>
     <p>This series taught me lots of life lessons.</p>
     <ul>
       <li><i>Never give up because there is no easy way to achieve our dreams.</i></li>

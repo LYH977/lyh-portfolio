@@ -16,6 +16,7 @@ import { PlantMarkup } from '../../2D/Descriptions/Plant'
 import { SocialMarkup } from '../../2D/Descriptions/Social'
 import { Color } from 'three/src/math/Color'
 import Social from '../../components/primary/Social'
+import { SkillsMarkup } from '../../2D/Descriptions/Skills'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -36,12 +37,11 @@ export default function RectShelf() {
       position={ [3.7 + 0.0, 2.4 + Y_OFFSET, 0] }
       rotation={ [0, angleToRadians(-90), 0] }
     >
-      <ZoomAndPressable description={ EducationMarkup } margin={ 2 }>
+      <ZoomAndPressable description={ SkillsMarkup } margin={ 2 }>
         { (meshRef: any) => (
           <Books
             scale={ [0.003, 0.004, 0.003] }
             position={ [-0.2, -0.099, -0.06] }
-            rotation={ [0, angleToRadians(0), 0] }
             ref={ meshRef }
           />
         ) }
@@ -55,7 +55,7 @@ export default function RectShelf() {
             rotation={ [
               angleToRadians(90),
               angleToRadians(-15),
-              angleToRadians(0),
+              0,
             ] }
             position={ [0.299, -0.16, 0] }
             ref={ meshRef }
