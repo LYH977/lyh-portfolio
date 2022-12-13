@@ -8,24 +8,15 @@ import { Education } from '../Education'
 import { EducationMarkup } from '../../2D/Descriptions/Education'
 import { ProjectsMarkup } from '../../2D/Descriptions/Projects'
 
-import ZoomAndPressable from '../../wrapper/ZoomAndPressable'
 import { Books } from '../Books'
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Plant } from '../Plant'
 import { PlantMarkup } from '../../2D/Descriptions/Plant'
 import { SocialMarkup } from '../../2D/Descriptions/Social'
 import { Color } from 'three/src/math/Color'
 import Social from '../../components/primary/Social'
 import { SkillsMarkup } from '../../2D/Descriptions/Skills'
+import Zoomable from '../../wrapper/Zoomable'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Object_3: THREE.Mesh
-  }
-  materials: {
-    ['White_Veneer.002']: THREE.MeshStandardMaterial
-  }
-}
 
 export default function RectShelf() {
   const { nodes, materials } = useGLTF(MODEL_PATH.PRIMARY) as any
@@ -37,7 +28,7 @@ export default function RectShelf() {
       position={ [3.7 + 0.0, 2.4 + Y_OFFSET, 0] }
       rotation={ [0, angleToRadians(-90), 0] }
     >
-      <ZoomAndPressable description={ SkillsMarkup } margin={ 2 }>
+      <Zoomable description={ SkillsMarkup } margin={ 2 }>
         { (meshRef: any) => (
           <Books
             scale={ [0.003, 0.004, 0.003] }
@@ -45,9 +36,9 @@ export default function RectShelf() {
             ref={ meshRef }
           />
         ) }
-      </ZoomAndPressable>
+      </Zoomable>
 
-      <ZoomAndPressable description={ ProjectsMarkup }>
+      <Zoomable description={ ProjectsMarkup }>
         { (meshRef: any) => (
           <Tablet
             color={ new Color(0x0902c7) }
@@ -61,9 +52,9 @@ export default function RectShelf() {
             ref={ meshRef }
           />
         ) }
-      </ZoomAndPressable>
+      </Zoomable>
 
-      <ZoomAndPressable description={ EducationMarkup }>
+      <Zoomable description={ EducationMarkup }>
         { (meshRef: any) => (
           <Education
             position={ [-0.25, 0.08, 0.02] }
@@ -72,39 +63,30 @@ export default function RectShelf() {
             ref={ meshRef }
           />
         ) }
-      </ZoomAndPressable>
+      </Zoomable>
 
-      <ZoomAndPressable description={ PlantMarkup } margin={ 2 }>
+      <Zoomable description={ PlantMarkup } margin={ 2 }>
         { (meshRef: any) => (
           <Plant scale={ 0.06 } position={ [0.31, 0.076, -0.01] } ref={ meshRef } />
         ) }
-      </ZoomAndPressable>
+      </Zoomable>
 
-      <ZoomAndPressable description={ SocialMarkup }>
+      <Zoomable description={ SocialMarkup }>
         { (meshRef: any) => (
-          <Social position={ [0.11, 0.105, -0.01] } url='in.jpg' ref={ meshRef } />
+          <group ref={ meshRef } >
+            <Social position={ [0.11, 0.105, -0.01] } url='in.jpg' />
+            <Social
+              position={ [0.17, 0.105, -0.01] }
+              url='resume1.jpg'
+            />
+            <Social
+              position={ [0.23, 0.105, -0.01] }
+              url='github.png'
+            />
+          </group>
         ) }
-      </ZoomAndPressable>
+      </Zoomable>
 
-      <ZoomAndPressable description={ SocialMarkup }>
-        { (meshRef: any) => (
-          <Social
-            position={ [0.17, 0.105, -0.01] }
-            url='resume1.jpg'
-            ref={ meshRef }
-          />
-        ) }
-      </ZoomAndPressable>
-
-      <ZoomAndPressable description={ SocialMarkup }>
-        { (meshRef: any) => (
-          <Social
-            position={ [0.23, 0.105, -0.01] }
-            url='github.png'
-            ref={ meshRef }
-          />
-        ) }
-      </ZoomAndPressable>
 
       <group
         scale={ [1, 0.7, 1] }

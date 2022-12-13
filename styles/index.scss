@@ -30,6 +30,7 @@ main {
   margin: 0;
   padding: 0;
   color: white;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ul > ul {
@@ -37,11 +38,35 @@ ul > ul {
 }
 
 li + ul {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 ul > li {
   white-space: pre-wrap;
+}
+
+.custom-list-item {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  & > p {
+    padding: 0.5rem;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+  }
+  span {
+    display: inline-block;
+    font-size: 2.5rem;
+  }
+  .position {
+    padding: 0 10px;
+  }
 }
 
 .star-bullet,
@@ -221,8 +246,23 @@ ul > li {
     transform: translate(300px, 70px);
   }
 }
+
+.element-fadeout {
+  animation-name: fadeOut;
+  animation-duration: 0.1s;
+  animation-delay: 6.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
 .logo-eye {
-  transform: scale(0.3) translate(50px, -100px);
+  transform: scale(0.3) translate(0px, -70px);
+}
+.logo-eye-anim {
+  animation-name: transX;
+  animation-duration: 0.1s;
+  animation-delay: 6.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 .intro {
@@ -289,13 +329,6 @@ ul > li {
   animation-delay: 3.6s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  &::before {
-    animation-name: fadeOut;
-    animation-duration: 1s;
-    animation-delay: 6.4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-  }
 }
 
 .bottom-section {
@@ -348,21 +381,17 @@ ul > li {
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
+.progress-text {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .progress-bar {
   background-color: rgb(96, 96, 96);
   width: 250px;
   height: 5px;
   position: relative;
-
-  &::before {
-    font-size: 1rem;
-    content: 'Loading';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  overflow: hidden;
   &::after {
     content: '';
     position: absolute;
@@ -373,7 +402,7 @@ ul > li {
     background-color: white;
     transform-origin: 0 0;
     animation-name: progressing;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-fill-mode: forwards;
   }
 }
@@ -395,73 +424,10 @@ ul > li {
   animation-fill-mode: forwards;
 }
 
-@media only screen and (max-width: 600px) {
-  .logo-L {
-    &::before {
-      transform: translate(70px, -140px) scale(1.2);
-    }
-    &::after {
-      transform: translate(115px, -80px);
-    }
-  }
-  .logo-H {
-    &::before {
-      transform: rotate(-75deg) translate(-170px, 60px) scaleX(0.8);
-    }
-    &::after {
-      transform: translate(120px, 230px);
-    }
-  }
-  .intro {
-    & > h1 {
-      transform: translateY(-100px);
-    }
-  }
-}
-
-@media only screen and (max-width: 384px) {
-  .logo-L {
-    &::before {
-      transform: translate(40px, -140px) scale(0.9);
-    }
-    &::after {
-      transform: translate(115px, -80px);
-    }
-  }
-
-  .logo-Y {
-    &::before {
-      transform: translate(-15px, -20px) scale(0.9);
-    }
-  }
-  .logo-H {
-    &::before {
-      transform: rotate(-75deg) translate(-180px, 50px) scaleX(0.7);
-    }
-    &::after {
-      transform: translate(120px, 230px);
-    }
-  }
-}
-.test {
-  overflow: hidden;
-  height: 500px;
-  width: 500px;
-  background-color: #48ff00;
-  position: relative;
-  border-radius: 50%;
-  transition: all 1s;
-  &:hover {
-    transform: scale(10, 10);
-  }
-}
-
 .modal {
   background-color: rgba(34, 23, 23, 0.727);
-
   height: 100vh;
   width: 100vw;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -526,11 +492,26 @@ ul > li {
   justify-content: flex-start;
   align-items: center;
   font-size: 1.5rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
 
+.tooltip {
+  opacity: 1;
+  background-color: rgba(128, 128, 128, 0.623);
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  cursor: pointer;
+  &:nth-child(3) {
+    font-size: 2.5rem;
+    margin-left: auto;
+  }
+}
 .loading-secondary-overlay {
   background-color: rgb(34, 23, 23);
   position: absolute;
@@ -544,25 +525,6 @@ ul > li {
   animation-delay: 3s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-}
-
-.tooltip {
-  opacity: 0.4;
-  background-color: rgba(128, 128, 128, 0.484);
-  height: 2.5rem;
-  width: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  cursor: pointer;
-  &:nth-child(3) {
-    font-size: 2.5rem;
-    margin-left: auto;
-  }
-  &:hover {
-    opacity: 1;
-  }
 }
 
 @keyframes scaleUp {
@@ -607,9 +569,10 @@ ul > li {
 
 @keyframes formLogo {
   100% {
-    transform: translate(15px, 0px) scale(1.5);
+    transform: scale(1.2);
   }
 }
+
 @keyframes sharingan {
   0% {
     opacity: 0.2;
@@ -629,7 +592,7 @@ ul > li {
 
   100% {
     opacity: 1;
-    transform: rotate(-650deg) scale(40);
+    transform: rotate(-650deg) scale(60);
   }
 }
 
@@ -648,5 +611,60 @@ ul > li {
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-L {
+    &::before {
+      transform: translate(70px, -140px) scale(1.2);
+    }
+    &::after {
+      transform: translate(115px, -80px);
+    }
+  }
+  .logo-H {
+    &::before {
+      transform: rotate(-75deg) translate(-170px, 60px) scaleX(0.8);
+    }
+    &::after {
+      transform: translate(120px, 230px);
+    }
+  }
+  .intro {
+    & > h1 {
+      transform: translateY(-100px);
+    }
+  }
+}
+
+@media only screen and (max-width: 384px) {
+  .container > h1 {
+    font-size: 22px;
+  }
+  .intro > h1 {
+    font-size: 0.8rem;
+  }
+  .logo-L {
+    &::before {
+      transform: translate(40px, -140px) scale(0.9);
+    }
+    &::after {
+      transform: translate(115px, -80px);
+    }
+  }
+
+  .logo-Y {
+    &::before {
+      transform: translate(-15px, -20px) scale(0.9);
+    }
+  }
+  .logo-H {
+    &::before {
+      transform: rotate(-75deg) translate(-180px, 50px) scaleX(0.7);
+    }
+    &::after {
+      transform: translate(120px, 230px);
+    }
   }
 }

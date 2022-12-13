@@ -3,7 +3,7 @@ export const SkillsMarkup = (
     <h1>Skills</h1>
     <ul>
       <li>Proficient</li>
-      <ul className='column-two'>
+      <ul className='column-two custom-list-item'>
         <li>ReactJS</li>
         <li>ReduxJS</li>
         <li>CSS</li>
@@ -15,7 +15,7 @@ export const SkillsMarkup = (
         <li>Frontend Development</li>
       </ul>
       <li>Intermediate</li>
-      <ul className='column-two'>
+      <ul className='column-two custom-list-item'>
         <li>React Native</li>
         <li>Chrome Dev Tool</li>
         <li>Material UI</li>
@@ -28,7 +28,7 @@ export const SkillsMarkup = (
         <li>NextJS</li>
       </ul>
       <li>Basic</li>
-      <ul className='column-two'>
+      <ul className='column-two custom-list-item'>
         <li>Java</li>
         <li>Python</li>
         <li>Plotly</li>

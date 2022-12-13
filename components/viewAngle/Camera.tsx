@@ -16,13 +16,13 @@ const Camera = () => {
       timeline.fromTo(
         cameraRef.current.position,
         {
-          x: -0.3,
-          y: -5,
+          x: 1.5,
+          y: -1,
           z: 1.5,
         },
         {
-          x: -0.3,
-          y: -0.7,
+          x: 0.5,
+          y: -1,
           z: -25,
           duration: 1,
           delay: 6.2,
@@ -56,10 +56,3 @@ const Camera = () => {
 }
 
 export default Camera
-// enabled={true}
-// ref={orbitControlsRef}
-// minPolarAngle={angleToRadians(60)}
-// maxPolarAngle={angleToRadians(90)}
-// maxDistance={4}
-// minPolarAngle={0}
-// maxPolarAngle={Math.PI / 1.75}

@@ -1,5 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from 'react'
-import ZoomAndPressable from '../../wrapper/ZoomAndPressable'
+import { forwardRef, memo, useEffect, useRef, useState } from 'react'
 import { useStore } from '../../store'
 import { angleToRadians } from '../../utils/formatter'
 import { Loading } from '../primary/Loading'
@@ -16,6 +15,7 @@ import { useBounds } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
 import { DEFAULT_VECTOR } from '../../utils/sharedMesh'
 import Frame from '../../models/Frame'
+import Zoomable from '../../wrapper/Zoomable'
 
 export const SecondaryModels = () => {
   const [shouldRender, setShouldRender] = useState<boolean>(false)
@@ -87,7 +87,7 @@ export const SecondaryModels = () => {
       <Loading position={ [0.035, 0.33, 0.0778] } visible={ !shouldRender } />
       <Loading position={ [0.41, 0.33, 0.0778] } visible={ !shouldRender } />
       <Loading position={ [0.035, 0.11, 0.0778] } visible={ !shouldRender } />
-      <ZoomAndPressable description={ DanceMarkup }>
+      <Zoomable description={ DanceMarkup }>
         { (meshRef: any) =>
           shouldRender ? (
             <Frame
@@ -98,8 +98,8 @@ export const SecondaryModels = () => {
             />
           ) : null
         }
-      </ZoomAndPressable>
-      <ZoomAndPressable description={ MalaysiaMarkup }>
+      </Zoomable>
+      <Zoomable description={ MalaysiaMarkup }>
         { (meshRef: any) =>
           shouldRender ? (
             <Model
@@ -112,9 +112,9 @@ export const SecondaryModels = () => {
             />
           ) : null
         }
-      </ZoomAndPressable>
+      </Zoomable>
 
-      <ZoomAndPressable description={ NarutoMarkup }>
+      <Zoomable description={ NarutoMarkup }>
         { (meshRef: any) =>
           shouldRender ? (
             <Model
@@ -129,8 +129,8 @@ export const SecondaryModels = () => {
             />
           ) : null
         }
-      </ZoomAndPressable>
-      <ZoomAndPressable description={ SydneyMarkup }>
+      </Zoomable>
+      <Zoomable description={ SydneyMarkup }>
         { (meshRef: any) =>
           shouldRender ? (
             <Model
@@ -143,20 +143,20 @@ export const SecondaryModels = () => {
             />
           ) : null
         }
-      </ZoomAndPressable>
-      <ZoomAndPressable description={ AOTMarkup }>
+      </Zoomable>
+      <Zoomable description={ AOTMarkup }>
         { (meshRef: any) =>
           shouldRender ? (
-            <Model
+            (<MemoModel
               ref={ meshRef }
               position={ [-0.295, 0.29, -0.01] }
               scale={ 0.04 }
               modelScene={ aotRef.current }
 
-            />
+            />)
           ) : null
         }
-      </ZoomAndPressable>
+      </Zoomable>
     </>
   )
 }
@@ -170,5 +170,6 @@ const Model = forwardRef(
     return <primitive object={ modelScene } { ...rest } ref={ zoomRef } />
   }
 )
+const MemoModel = memo(Model)
 
 Model.displayName = 'Model';

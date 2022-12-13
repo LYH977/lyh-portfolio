@@ -1,28 +1,7 @@
 import { forwardRef } from 'react'
-import { Sparkles, useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+import { useGLTF } from '@react-three/drei'
 import { MODEL_PATH } from '../../utils/constants'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    plant_Object_8: THREE.Mesh
-    plant_Object_13: THREE.Mesh
-    plant_Object_14: THREE.Mesh
-    plant_Object_16: THREE.Mesh
-    plant_Object_17: THREE.Mesh
-    plant_Object_19: THREE.Mesh
-    plant_Object_20: THREE.Mesh
-    plant_Object_10: THREE.Mesh
-    plant_Object_11: THREE.Mesh
-    plant_Object_6: THREE.Mesh
-  }
-  materials: {
-    plant_soil: THREE.MeshStandardMaterial
-    ['plant_plant.003']: THREE.MeshStandardMaterial
-    ['plant_rim.003']: THREE.MeshStandardMaterial
-    ['plant_material.002']: THREE.MeshStandardMaterial
-  }
-}
 
 export const Plant = forwardRef(
   (props: JSX.IntrinsicElements['group'], ref: any) => {
@@ -90,7 +69,6 @@ export const Plant = forwardRef(
             </group>
           </group>
         </group>
-        <Sparkles speed={ 0.5 } count={ 10 } position={ [0, 2.5, 0.2] } size={ 0.14 } />
       </group>
     )
   }

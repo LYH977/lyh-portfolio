@@ -18,16 +18,16 @@ const Landing = (props: any) => {
         </h1>
 
         <div className='intro'>
-          <h1 className={ `${isAnimating ? 'h1-anim' : ''}` }>Present by</h1>
+          <h1 className={ `${isAnimating ? 'h1-anim' : ''}` }>Presented by</h1>
           <div
             className={ `logo-container${isAnimating ? ' logo-container-anim' : ''
               }` }
           >
-            <div className={ `logo-L ${isAnimating ? ' logo-fadeout' : ''
+            <div className={ `logo-L ${isAnimating ? ' element-fadeout' : ''
               }` }></div>
-            <div className={ `logo-Y ${isAnimating ? ' logo-fadeout' : ''
+            <div className={ `logo-Y ${isAnimating ? ' element-fadeout' : ''
               }` }></div>
-            <div className={ `logo-H ${isAnimating ? ' logo-fadeout' : ''
+            <div className={ `logo-H ${isAnimating ? ' element-fadeout' : ''
               }` }></div>
             <div className='logo-eye'>
               <div className={ `circle${isAnimating ? ' circle-anim' : ''}` }>
