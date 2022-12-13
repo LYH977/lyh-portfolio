@@ -1,6 +1,5 @@
 import {
   Selection,
-  Outline,
   EffectComposer,
   Bloom,
 } from '@react-three/postprocessing'
@@ -17,7 +16,6 @@ import { Moon } from '../models/Moon'
 import Room from './Room'
 
 const MyCanvas = (props: any) => {
-  // useGLTF(MODEL_PATH.PRIMARY)
   return (
     <Canvas
       className='three-canvas-container'
@@ -28,17 +26,10 @@ const MyCanvas = (props: any) => {
         <EffectComposer autoClear={ false }>
           <Bloom
             mipmapBlur
-            intensity={ 1.0 } // The bloom intensity.
-            kernelSize={ KernelSize.LARGE } // blur kernel size
-            luminanceThreshold={ 0.2 } // luminance threshold. Raise this value to mask out darker elements in the scene.
-            luminanceSmoothing={ 0.9 } // smoothness of the luminance threshold. Range is [0, 1]
-          />
-          <Outline
-            blur
-            //@ts-ignore
-            visibleEdgeColor='white'
-            edgeStrength={ 2 }
-            width={ 500 }
+            intensity={ 1.0 }
+            kernelSize={ KernelSize.LARGE }
+            luminanceThreshold={ 0.2 }
+            luminanceSmoothing={ 0.9 }
           />
         </EffectComposer>
 
