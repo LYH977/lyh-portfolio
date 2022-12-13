@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Lee Yuan Hooi</title>
         <meta name="description" content="Lee Yuan Hooi is a React Frontend Developer from Malaysia. Lee prioritizes optimized and performant products." />
-        <link rel="icon" href="/LYH.svg" />
+        <link rel="icon" href="/L.png" />
       </Head>
 
       <main >

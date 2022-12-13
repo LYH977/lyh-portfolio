@@ -27,7 +27,7 @@ type GLTFResult = GLTF & {
 const Frame = forwardRef(
   (props: JSX.IntrinsicElements['group'], zoomRef: any) => {
     const { nodes, materials } = useGLTF(MODEL_PATH.PRIMARY) as any
-    const texture = useTexture('smooth.jpg')
+    const texture = useTexture('dance.jpg')
 
 
 
