@@ -8,26 +8,33 @@ export const Tooltips = () => {
   const defaultAngleCallback = useStore(
     (state: any) => state.defaultAngleCallback
   )
+  const isAllSet = useStore((state: any) => state.isAllSet)
 
   return (
-    <div className='tooltips-container'>
-      <div className='tooltip' onClick={ () => {
-        openModal(CreditsMarkup)
-      } }>
+    <div
+      className={ `tooltips-container${isAllSet ? ' tooltips-container-slidedown' : ''
+        }` }
+    >
+      <button
+        className='tooltip'
+        onClick={ () => {
+          openModal(CreditsMarkup)
+        } }
+      >
         🎖
-      </div>
-      <div
+      </button>
+      <button
         className='tooltip'
         onClick={ () => {
           openModal(InfoMarkup)
         } }
       >
         ℹ
-      </div>
+      </button>
 
-      <div className='tooltip' onClick={ defaultAngleCallback }>
+      <button className='tooltip' onClick={ defaultAngleCallback }>
         ⌖
-      </div>
+      </button>
     </div>
   )
 }

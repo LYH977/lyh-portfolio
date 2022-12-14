@@ -495,17 +495,24 @@ ul > li {
   position: fixed;
   top: 0;
   left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.4s;
+}
+
+.tooltips-container-slidedown {
+  transform: translateY(0);
 }
 
 .tooltip {
-  opacity: 1;
-  background-color: rgba(128, 128, 128, 0.623);
+  border: none;
+  background-color: rgb(128, 128, 128);
   height: 3rem;
   width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+  font-size: 1.4rem;
   cursor: pointer;
   &:nth-child(3) {
     font-size: 2.5rem;
