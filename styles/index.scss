@@ -428,7 +428,7 @@ ul > li {
   background-color: rgba(34, 23, 23, 0.727);
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
@@ -438,7 +438,6 @@ ul > li {
   align-items: center;
   opacity: 0;
   transition: transform 0.1s, opacity 0.1s;
-
   transform: scale(0, 0);
 
   &.shown {
