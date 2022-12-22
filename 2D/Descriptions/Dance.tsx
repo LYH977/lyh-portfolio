@@ -10,12 +10,12 @@ export const DanceMarkup = (
       favorite categories.
     </p>
     <p>
-      This dance{ ' ' }
+      This{ ' ' }
       <a
         target='_blank'
         href='https://www.youtube.com/watch?v=VpcKvR_iF8k&ab_channel=LeeYuanHooi'
       >
-        video
+        dance video
       </a>{ ' ' }
       puts a graceful end to my precious university life, in gown.
     </p>

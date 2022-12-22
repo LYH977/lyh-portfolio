@@ -9,13 +9,13 @@ import { Canvas } from '@react-three/fiber'
 
 import Camera from './viewAngle/Camera'
 import MyOrbitControl from './viewAngle/MyOrbitControl'
-import { Stars, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { MODEL_PATH } from '../utils/constants'
 import { KernelSize } from 'postprocessing'
 import { Moon } from '../models/Moon'
 import Room from './Room'
 
-const MyCanvas = (props: any) => {
+const MyCanvas = () => {
   return (
     <Canvas
       className='three-canvas-container'
@@ -37,15 +37,6 @@ const MyCanvas = (props: any) => {
         <MyOrbitControl />
         <Room />
         <Moon />
-        <Stars
-          radius={ 50 }
-          depth={ 50 }
-          count={ 1000 }
-          factor={ 4 }
-          saturation={ 0 }
-          fade
-          speed={ 2 }
-        />
       </Selection>
     </Canvas>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { useStore } from '../../store'
 
 
-export const Modal = (props: any) => {
+export const Modal = () => {
   const closeModal = useStore((state: any) => state.closeModal)
   const isModalOpen = useStore((state: any) => state.isModalOpen)
   const modalContent = useStore((state: any) => state.modalContent)
