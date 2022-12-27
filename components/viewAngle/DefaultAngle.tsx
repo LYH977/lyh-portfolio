@@ -39,7 +39,7 @@ export const DefaultAngle = () => {
         api.refresh(DEFAULT_VECTOR).fit()
       } }
     >
-      <boxBufferGeometry args={ [0, 0] } />
+      <boxGeometry args={ [0, 0] } />
       <meshStandardMaterial />
     </mesh>
   )

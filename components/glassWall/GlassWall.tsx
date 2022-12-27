@@ -21,14 +21,14 @@ const GlassWall = () => {
         rotation={ [angleToRadians(90), angleToRadians(0), angleToRadians(180)] }
         position={ [0, 1.98, 0] }
       >
-        <circleBufferGeometry args={ [4, 50, 0, Math.PI] } />
+        <circleGeometry args={ [4, 50, 0, Math.PI] } />
         <meshStandardMaterial color={ FLOOR_COLOR } side={ DoubleSide } />
       </mesh>
       <mesh //btm
         rotation={ [angleToRadians(90), angleToRadians(0), angleToRadians(180)] }
         position={ [0, -2.02, 0] }
       >
-        <circleBufferGeometry args={ [4, 50, 0, Math.PI] } />
+        <circleGeometry args={ [4, 50, 0, Math.PI] } />
         <meshStandardMaterial color={ FLOOR_COLOR } side={ BackSide } />
       </mesh>
     </group>

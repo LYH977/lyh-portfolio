@@ -16,7 +16,7 @@ export const LYH = forwardRef(
         />
         <Rings />
         <mesh position={ [25, 0, -20] }>
-          <boxBufferGeometry args={ [30, 30, 30] } />
+          <boxGeometry args={ [30, 30, 30] } />
           <meshStandardMaterial visible={ false } />
         </mesh>
       </group>

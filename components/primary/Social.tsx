@@ -12,7 +12,7 @@ const Social = forwardRef(({ url, ...props }: any, zoomRef: any) => {
       rotation={ [angleToRadians(90), angleToRadians(-90), angleToRadians(90)] }
       ref={ zoomRef }
     >
-      <sphereBufferGeometry args={ [0.3, 64, 32, 0, Math.PI * 2, 0, Math.PI] } />
+      <sphereGeometry args={ [0.3, 64, 32, 0, Math.PI * 2, 0, Math.PI] } />
       <meshStandardMaterial map={ texture as THREE.Texture } side={ DoubleSide } />
     </mesh>
   )

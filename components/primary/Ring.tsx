@@ -68,7 +68,7 @@ const Ring = ({
   return (
     <group ref={ ringRef } rotation={ rotation } { ...rest }>
       <mesh scale={ scale }>
-        <torusBufferGeometry args={ [0.5, 0.05, 10, 50, Math.PI * 2] } />
+        <torusGeometry args={ [0.5, 0.05, 10, 50, Math.PI * 2] } />
         <meshStandardMaterial color={ color } side={ DoubleSide } />
       </mesh>
       { children }

@@ -26,7 +26,7 @@ export function Moon(props: JSX.IntrinsicElements['group']) {
         scale={ 16 }
         ref={ moonLight }
       >
-        <sphereBufferGeometry
+        <sphereGeometry
           args={ [0.3, 10, 100, 0, Math.PI * 2, 0, Math.PI] }
         />
         <meshStandardMaterial

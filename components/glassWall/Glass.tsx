@@ -14,7 +14,7 @@ const Glass = ({ position, angle }: any) => {
 
         <group position={ [1, -0.015, 0] }>
           <mesh>
-            <boxBufferGeometry args={ [width / 10, 4, 0.15] } />
+            <boxGeometry args={ [width / 10, 4, 0.15] } />
             { FRONT_MESH }
           </mesh>
 
@@ -23,7 +23,7 @@ const Glass = ({ position, angle }: any) => {
         <mesh //left
           position={ [-1, -0.015, 0] }
         >
-          <boxBufferGeometry args={ [width / 10, 4, 0.15] } />
+          <boxGeometry args={ [width / 10, 4, 0.15] } />
 
           { FRONT_MESH }
         </mesh>
@@ -31,14 +31,14 @@ const Glass = ({ position, angle }: any) => {
         <mesh //top
           position={ [0, 1.58, 0] }
         >
-          <boxBufferGeometry args={ [width, 4 / 5, 0.15] } />
+          <boxGeometry args={ [width, 4 / 5, 0.15] } />
           { FRONT_MESH }
         </mesh>
         <group //btm
           position={ [0, -1.815, 0] }
         >
           <mesh>
-            <boxBufferGeometry args={ [width, 4 / 10, 0.15] } />
+            <boxGeometry args={ [width, 4 / 10, 0.15] } />
             { FRONT_MESH }
           </mesh>
         </group>
@@ -47,7 +47,7 @@ const Glass = ({ position, angle }: any) => {
             rotation={ [0, angleToRadians(0), 0] }
             position={ [0, 1.88, 0.17] }
           >
-            <boxBufferGeometry args={ [2.2, 0.2, 0.1] } />
+            <boxGeometry args={ [2.2, 0.2, 0.1] } />
             { DOUBLE_SIDE_MESH }
           </mesh>
           <GradientEffect

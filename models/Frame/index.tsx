@@ -50,7 +50,7 @@ const Frame = forwardRef(
               angleToRadians(90),
             ] }
           >
-            <planeBufferGeometry args={ [1, 1.241] } />
+            <planeGeometry args={ [1, 1.241] } />
             <meshStandardMaterial
               map={ texture as THREE.Texture }
               toneMapped={ false }

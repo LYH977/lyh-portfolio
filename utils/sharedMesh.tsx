@@ -11,7 +11,7 @@ export const DOUBLE_SIDE_MESH = (
     <meshStandardMaterial color={ FLOOR_COLOR } side={ DoubleSide } />
 )
 
-export const PLANE = <planeBufferGeometry />
+export const PLANE = <planeGeometry />
 
 export const DEFAULT_VECTOR = new Box3(
     new Vector3(0, 0, 5),

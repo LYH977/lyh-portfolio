@@ -13,7 +13,7 @@ export const Loading = (props: any) => {
   return (
     <group { ...props }>
       <mesh ref={ meshRef }>
-        <octahedronBufferGeometry args={ [0.05, 0] } />
+        <octahedronGeometry args={ [0.05, 0] } />
         <meshStandardMaterial side={ DoubleSide } wireframe />
       </mesh>
     </group>

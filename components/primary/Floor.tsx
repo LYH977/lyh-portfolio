@@ -14,7 +14,7 @@ const Floor = () => {
         position={ [0, 0 + Y_OFFSET, 0] }
         receiveShadow
       >
-        <planeBufferGeometry args={ [FLOOR_WIDTH, FLOOR_HEIGHT] } />
+        <planeGeometry args={ [FLOOR_WIDTH, FLOOR_HEIGHT] } />
         { FRONT_MESH }
       </mesh>
     </group>

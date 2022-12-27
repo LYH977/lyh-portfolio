@@ -24,7 +24,7 @@ const Wall = () => {
         position={ [4, 2 + Y_OFFSET, 0] }
         receiveShadow
       >
-        <planeBufferGeometry args={ [FLOOR_HEIGHT, FLOOR_WIDTH / 2] } />
+        <planeGeometry args={ [FLOOR_HEIGHT, FLOOR_WIDTH / 2] } />
         <meshStandardMaterial color={ FLOOR_COLOR } side={ BackSide } />
       </mesh>
       <mesh //left
@@ -32,7 +32,7 @@ const Wall = () => {
         position={ [-4, 2 + Y_OFFSET, 0] }
         receiveShadow
       >
-        <planeBufferGeometry args={ [FLOOR_HEIGHT, FLOOR_WIDTH / 2] } />
+        <planeGeometry args={ [FLOOR_HEIGHT, FLOOR_WIDTH / 2] } />
         { FRONT_MESH }
       </mesh>
 
@@ -41,7 +41,7 @@ const Wall = () => {
           rotation={ [-angleToRadians(90), 0, 0] }
           receiveShadow
         >
-          <planeBufferGeometry args={ [FLOOR_WIDTH, FLOOR_HEIGHT] } />
+          <planeGeometry args={ [FLOOR_WIDTH, FLOOR_HEIGHT] } />
           { DOUBLE_SIDE_MESH }
         </mesh>
         <CeilingPattern />
@@ -53,7 +53,7 @@ const Wall = () => {
           rotation={ [0, angleToRadians(90), 0] }
           position={ [-2, 3.9 + Y_OFFSET, -0] }
         >
-          <boxBufferGeometry args={ [8, 0.2, 0.1] } />
+          <boxGeometry args={ [8, 0.2, 0.1] } />
           { DOUBLE_SIDE_MESH }
         </mesh>
         <GradientEffect
@@ -68,7 +68,7 @@ const Wall = () => {
           rotation={ [0, angleToRadians(90), 0] }
           position={ [-2, 3.9 + Y_OFFSET, -0] }
         >
-          <boxBufferGeometry args={ [8, 0.2, 0.1] } />
+          <boxGeometry args={ [8, 0.2, 0.1] } />
           { DOUBLE_SIDE_MESH }
         </mesh>
         <GradientEffect
@@ -84,7 +84,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, 0] }
         position={ [-3.98, 0.15 + Y_OFFSET, 0] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 8, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -100,7 +100,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, 0] }
         position={ [3.98, 0.15 + Y_OFFSET, 0] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 8, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -116,7 +116,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, angleToRadians(90 - 75)] }
         position={ [-3.7, 0.15 + Y_OFFSET, -5] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 2.1, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -131,7 +131,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, angleToRadians(90 - 45)] }
         position={ [-2.72, 0.15 + Y_OFFSET, -6.72] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 2.02, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -146,7 +146,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, angleToRadians(90 - 15)] }
         position={ [-1, 0.15 + Y_OFFSET, -7.7] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 2.1, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -161,7 +161,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, angleToRadians(90 + 15)] }
         position={ [1, 0.15 + Y_OFFSET, -7.7] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 2.1, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -176,7 +176,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, angleToRadians(90 + 45)] }
         position={ [2.72, 0.15 + Y_OFFSET, -6.72] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 2.02, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial
@@ -191,7 +191,7 @@ const Wall = () => {
         rotation={ [angleToRadians(90), 0, angleToRadians(90 + 75)] }
         position={ [3.7, 0.15 + Y_OFFSET, -5] }
       >
-        <cylinderBufferGeometry
+        <cylinderGeometry
           args={ [0.02, 0.02, 2.1, 6, 1, false, 0, Math.PI * 2] }
         />
         <meshStandardMaterial

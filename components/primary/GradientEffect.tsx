@@ -1,7 +1,7 @@
 import { GradientTexture } from '@react-three/drei'
 import { DoubleSide } from 'three/src/constants'
 
-const PLANE = <planeBufferGeometry />
+const PLANE = <planeGeometry />
 
 export const CP_GRADIENT_MESH = <meshBasicMaterial side={ DoubleSide } transparent opacity={ 0.8 }>
   <GradientTexture

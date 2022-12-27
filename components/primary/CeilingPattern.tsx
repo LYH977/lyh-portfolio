@@ -9,7 +9,7 @@ import { MeshStandardMaterial } from 'three/src/materials/MeshStandardMaterial'
 
 
 
-const PLANE = <planeBufferGeometry />
+const PLANE = <planeGeometry />
 
 const t = new MeshStandardMaterial()
 
