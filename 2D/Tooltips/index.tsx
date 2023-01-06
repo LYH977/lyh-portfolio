@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStore } from '../../store'
 import { CreditsMarkup } from '../Descriptions/Credits'
 import { InfoMarkup } from '../Descriptions/Info'
@@ -10,10 +10,12 @@ export const Tooltips = () => {
     (state: any) => state.defaultAngleCallback
   )
   const isAllSet = useStore((state: any) => state.isAllSet)
+  const [isInfoClicked, setIsInfoClicked] = useState<boolean>(false)
+  const [isLocationClicked, setIsLocationClicked] = useState<boolean>(false)
 
   return (
     <div
-      className={ `tooltips-container${isAllSet ? ' tooltips-container-slidedown' : ''
+      className={ `tooltips-container${true ? ' tooltips-container-slidedown' : ''
         }` }
     >
       <button
@@ -22,19 +24,27 @@ export const Tooltips = () => {
           openModal(CreditsMarkup)
         } }
       >
-        <Image src='/love.png' alt='List of credits.' height={ 25 } width={ 25 } />
+        <Image src='/love.png' alt='List of credits.' height={ 30 } width={ 30 } />
       </button>
       <button
         className='tooltip'
+        data-clicked={ isInfoClicked }
         onClick={ () => {
+          setIsInfoClicked(true)
           openModal(InfoMarkup)
         } }
       >
-        <Image src='/info.png' alt='User manual.' height={ 25 } width={ 25 } />
+        <Image src='/info.png' alt='User manual.' height={ 30 } width={ 30 } />
       </button>
 
-      <button className='tooltip' onClick={ defaultAngleCallback }>
-        <Image src='/location.png' alt='Back to original position.' height={ 20 } width={ 20 } />
+      <button
+        className='tooltip'
+        data-clicked={ isLocationClicked }
+        onClick={ () => {
+          setIsLocationClicked(true)
+          defaultAngleCallback()
+        } }>
+        <Image src='/location.png' alt='Back to original position.' height={ 35 } width={ 35 } />
       </button>
     </div>
   )
