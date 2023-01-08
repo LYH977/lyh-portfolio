@@ -1,3 +1,5 @@
+import RedirectIcon from '../Components/RedirectIcon'
+
 export const DanceMarkup = (
   <>
     <h1>Dancing</h1>
@@ -17,7 +19,7 @@ export const DanceMarkup = (
           href='https://www.youtube.com/watch?v=VpcKvR_iF8k&ab_channel=LeeYuanHooi'
         >
           dance video
-        </a></b>{ ' ' }
+        </a><RedirectIcon /></b>{ ' ' }
       puts a graceful end to my precious university life, in gown.
     </p>
   </>
