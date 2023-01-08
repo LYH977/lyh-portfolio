@@ -11,16 +11,14 @@ export const DanceMarkup = (
     </p>
     <p>
       This{ ' ' }
-      <a
-        target='_blank'
-        href='https://www.youtube.com/watch?v=VpcKvR_iF8k&ab_channel=LeeYuanHooi'
-      >
-        dance video
-      </a>{ ' ' }
+      <b>
+        <a
+          target='_blank'
+          href='https://www.youtube.com/watch?v=VpcKvR_iF8k&ab_channel=LeeYuanHooi'
+        >
+          dance video
+        </a></b>{ ' ' }
       puts a graceful end to my precious university life, in gown.
     </p>
-    {/* <video width='1080' height='1920' controls>
-      <source src='dance.mp4' type='video/mp4' />
-    </video> */}
   </>
 )

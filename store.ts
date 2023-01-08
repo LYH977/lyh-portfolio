@@ -33,5 +33,10 @@ export const useStore = create((set) => ({
 
   defaultAngleCallback: () => {},
   setDefaultAngleCallback: (cb: () => void) =>
-    set((state: any) => ({ defaultAngleCallback: cb })),
+    set((state: any) => ({
+      defaultAngleCallback: () => {
+        state.defaultAngleCallback()
+        cb()
+      },
+    })),
 }))
