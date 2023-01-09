@@ -1,6 +1,7 @@
 import { OrbitControls } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
 import { useStore } from '../../store'
+import { isTouchScreen } from '../../utils/checker'
 
 const MyOrbitControl = () => {
   const isAllSet = useStore((state: any) => state.isAllSet)
@@ -19,7 +20,7 @@ const MyOrbitControl = () => {
     return (
       <OrbitControls
         enableDamping={ false }
-        enablePan={ true }
+        enablePan={ isTouchScreen() }
         rotateSpeed={ 0.5 }
         zoomSpeed={ 1 }
         makeDefault
