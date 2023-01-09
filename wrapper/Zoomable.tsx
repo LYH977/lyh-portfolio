@@ -15,7 +15,12 @@ function Zoomable({ children, description }: any) {
           api.refresh(meshRef.current).fit()
         }
       } }
-      onContextMenu={ () => {
+      onContextMenu={ (e) => {
+        //@ts-ignore
+        if (e?.pointerType === 'mouse'
+          && e.altKey) {
+          return
+        }
         openModal(description)
       } }
 

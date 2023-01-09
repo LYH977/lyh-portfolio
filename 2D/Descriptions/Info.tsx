@@ -9,18 +9,6 @@ export const InfoMarkup = (
       <p>Focus on object</p>
 
       <p>
-        Right Click (computer)<br /><br />
-        Long Press (mobile)
-      </p>
-      <p>Open detail popup</p>
-
-      <p>
-        Mouse Wheel (computer)<br /><br />
-        Two fingers gesture (mobile)
-      </p>
-      <p>Zoom in and out</p>
-
-      <p>
         <Image src='/location.png' alt='location.' height={ 30 } width={ 30 } />{ ' ' }
         icon
       </p>
@@ -36,6 +24,26 @@ export const InfoMarkup = (
         icon
       </p>
       <p>Open credit popup</p>
+
+      <p>
+        Right Click (computer)<br /><br />
+        Long Press (mobile)
+      </p>
+      <p>Open detail popup</p>
+
+      <p>
+        Mouse Wheel (computer)<br /><br />
+        2 fingers zoom gesture (mobile)
+      </p>
+      <p>Zoom in and out</p>
+
+      <p>
+        Right Click + Drag + Alt (computer)<br /><br />
+        2 fingers slide gesture (mobile)
+      </p>
+      <p>Move camera left and right</p>
+
+
     </div>
     { isMacOS() && (
       <p>
