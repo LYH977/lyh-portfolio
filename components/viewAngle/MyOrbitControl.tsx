@@ -19,7 +19,7 @@ const MyOrbitControl = () => {
     return (
       <OrbitControls
         enableDamping={ false }
-        enablePan={ false }
+        enablePan={ true }
         rotateSpeed={ 0.5 }
         zoomSpeed={ 1 }
         makeDefault
