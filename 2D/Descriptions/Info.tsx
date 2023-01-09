@@ -38,10 +38,9 @@ export const InfoMarkup = (
       <p>Zoom in and out</p>
 
       <p>
-        Right Click + Drag + Alt (computer)<br /><br />
         2 fingers slide gesture (mobile)
       </p>
-      <p>Move camera left and right</p>
+      <p>Move camera around</p>
 
 
     </div>
