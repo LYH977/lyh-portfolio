@@ -8,9 +8,8 @@ export default function Home() {
   const MY_NAME = 'Lee Yuan Hooi'
   const TWITTER_ID = '@ho0i97'
   const SITE_URL = 'https://leeyuanhooi.vercel.app/'
-  const INTRO_IMG = SITE_URL + 'intro.png'
+  const INTRO_IMG = SITE_URL + 'lyh.jpg'
   const META_TITLE = `${MY_NAME} is a React Frontend Developer from Malaysia. Lee is passionate about learning React frontend technologies and he strives to deliver speedy and finest user experience.`
-
   const TITLE = 'title'
   const OG = 'og'
   const TWITTER = 'twitter'
@@ -22,11 +21,10 @@ export default function Home() {
   const CREATOR = 'creator'
   const IMG = 'image'
   const SRC = 'src'
-
   const SLI = 'summary_large_image'
 
   return (
-    <div >
+    <>
       <Head>
         <title>Lee Yuan Hooi</title>
         <meta name={ TITLE } content={ META_TITLE }></meta>
@@ -73,17 +71,16 @@ export default function Home() {
         <meta charSet='utf-8'></meta>
         <meta name="viewport" content='width=device-width' ></meta>
 
-
         <link rel="icon" href="/L.png" />
       </Head>
 
-      <main >
+      <>
         <MyCanvas />
         <Landing />
         <Tooltips />
         <Modal />
-      </main>
+      </>
 
-    </div>
+    </>
   )
 }
