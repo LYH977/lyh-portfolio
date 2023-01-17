@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useStore } from '../../store'
 import { CreditsMarkup } from '../Descriptions/Credits'
 import { InfoMarkup } from '../Descriptions/Info'
@@ -10,8 +10,12 @@ export const Tooltips = () => {
     (state: any) => state.defaultAngleCallback
   )
   const isAllSet = useStore((state: any) => state.isAllSet)
-  const [isInfoClicked, setIsInfoClicked] = useState<boolean>(false)
   const [isLocationClicked, setIsLocationClicked] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (isAllSet) openModal(InfoMarkup)
+  }, [isAllSet])
+
 
   return (
     <div
@@ -28,9 +32,7 @@ export const Tooltips = () => {
       </button>
       <button
         className='tooltip'
-        data-clicked={ isInfoClicked }
         onClick={ () => {
-          setIsInfoClicked(true)
           openModal(InfoMarkup)
         } }
       >

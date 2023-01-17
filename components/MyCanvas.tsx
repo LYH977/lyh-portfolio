@@ -1,4 +1,4 @@
-import { Selection, EffectComposer, Bloom } from "@react-three/postprocessing";
+import { Selection, EffectComposer, Bloom, Outline } from "@react-three/postprocessing";
 
 import { Canvas } from "@react-three/fiber";
 
@@ -13,23 +13,25 @@ import { isMacOS } from "../utils/checker";
 
 const MyCanvas = () => {
   return (
-    <Canvas className="three-canvas-container" dpr={1} frameloop="demand">
+    <Canvas className="three-canvas-container" dpr={ 1 } frameloop="demand">
       <Selection>
-        <EffectComposer autoClear={false}>
+        <EffectComposer autoClear={ false }>
           <Bloom
             mipmapBlur
-            intensity={isMacOS() ? 0 : 2.0}
-            kernelSize={KernelSize.LARGE}
-            luminanceThreshold={0.2}
-            luminanceSmoothing={0.9}
+            intensity={ isMacOS() ? 0 : 2.0 }
+            kernelSize={ KernelSize.LARGE }
+            luminanceThreshold={ 0.2 }
+            luminanceSmoothing={ 0.9 }
           />
+          <Outline blur edgeStrength={ 1 } />
+
         </EffectComposer>
 
         <Camera />
         <MyOrbitControl />
         <Room />
         <Moon />
-        <Stars radius={50} depth={50} count={1000} factor={4} saturation={0} fade speed={2} />
+        <Stars radius={ 50 } depth={ 50 } count={ 1000 } factor={ 4 } saturation={ 0 } fade speed={ 2 } />
       </Selection>
     </Canvas>
   );

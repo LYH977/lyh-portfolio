@@ -1,8 +1,9 @@
 import { OrbitControls } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
 import { useStore } from '../../store'
-import { isTouchScreen } from '../../utils/checker'
-
+import {
+  deviceType,
+} from 'detect-it';
 const MyOrbitControl = () => {
   const isAllSet = useStore((state: any) => state.isAllSet)
   const setDefaultAngleCallback = useStore(
@@ -20,7 +21,7 @@ const MyOrbitControl = () => {
     return (
       <OrbitControls
         enableDamping={ false }
-        enablePan={ isTouchScreen() }
+        enablePan={ deviceType !== 'mouseOnly' }
         rotateSpeed={ 0.5 }
         zoomSpeed={ 1 }
         makeDefault
