@@ -60,13 +60,13 @@ export const InfoMarkup = (
       </p>
       <p>Open credit popup</p>
 
-      <p>{ getFocusObjInfo() }</p>
+      { getFocusObjInfo() }
       <p>Focus on object</p>
 
-      <p>{ getDetailPopupInfo() }</p>
+      { getDetailPopupInfo() }
       <p>Open detail popup</p>
 
-      <p>{ getZoomInfo() }</p>
+      { getZoomInfo() }
       <p>Zoom in and out</p>
 
       { deviceType !== 'mouseOnly' && (<><p>

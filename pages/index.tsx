@@ -8,7 +8,7 @@ export default function Home() {
   const MY_NAME = 'Lee Yuan Hooi'
   const TWITTER_ID = '@ho0i97'
   const SITE_URL = 'https://leeyuanhooi.vercel.app/'
-  const INTRO_IMG = SITE_URL + 'lyh.jpg'
+  const INTRO_IMG = SITE_URL + 'L.png'
   const META_TITLE = `${MY_NAME} is a React Frontend Developer from Malaysia. Lee is passionate about learning React frontend technologies and he strives to deliver speedy and finest user experience.`
   const TITLE = 'title'
   const OG = 'og'
@@ -75,8 +75,8 @@ export default function Home() {
       </Head>
 
       <>
-        <MyCanvas />
-        <Landing />
+        {/* <MyCanvas /> */ }
+        {/* <Landing /> */ }
         <Tooltips />
         <Modal />
       </>
