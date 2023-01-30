@@ -75,8 +75,8 @@ export default function Home() {
       </Head>
 
       <>
-        {/* <MyCanvas /> */ }
-        {/* <Landing /> */ }
+        <MyCanvas />
+        <Landing />
         <Tooltips />
         <Modal />
       </>

@@ -10,6 +10,7 @@ export const Tooltips = () => {
     (state: any) => state.defaultAngleCallback
   )
   const isAllSet = useStore((state: any) => state.isAllSet)
+  const [isInfoClicked, setIsInfoClicked] = useState<boolean>(false)
   const [isLocationClicked, setIsLocationClicked] = useState<boolean>(false)
 
   useEffect(() => {
@@ -32,7 +33,9 @@ export const Tooltips = () => {
       </button>
       <button
         className='tooltip'
+        data-clicked={ isInfoClicked }
         onClick={ () => {
+          setIsInfoClicked(true)
           openModal(InfoMarkup)
         } }
       >
