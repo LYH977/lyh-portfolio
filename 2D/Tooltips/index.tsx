@@ -3,6 +3,7 @@ import { useStore } from '../../store'
 import { CreditsMarkup } from '../Descriptions/Credits'
 import { InfoMarkup } from '../Descriptions/Info'
 import Image from 'next/image'
+import { TutorialMarkup } from '../Descriptions/Tutorial'
 
 export const Tooltips = () => {
   const openModal = useStore((state: any) => state.openModal)
@@ -14,7 +15,7 @@ export const Tooltips = () => {
   const [isLocationClicked, setIsLocationClicked] = useState<boolean>(false)
 
   useEffect(() => {
-    if (isAllSet) openModal(InfoMarkup)
+    if (isAllSet) openModal(TutorialMarkup)
   }, [isAllSet])
 
 
@@ -25,6 +26,7 @@ export const Tooltips = () => {
     >
       <button
         className='tooltip'
+        title='List of credits'
         onClick={ () => {
           openModal(CreditsMarkup)
         } }
@@ -33,6 +35,16 @@ export const Tooltips = () => {
       </button>
       <button
         className='tooltip'
+        title='Tutorial Video'
+        onClick={ () => {
+          openModal(TutorialMarkup)
+        } }
+      >
+        <Image src='/tutorial.png' alt='Tutorial.' height={ 30 } width={ 30 } />
+      </button>
+      <button
+        className='tooltip'
+        title='User Manual'
         data-clicked={ isInfoClicked }
         onClick={ () => {
           setIsInfoClicked(true)
@@ -44,6 +56,7 @@ export const Tooltips = () => {
 
       <button
         className='tooltip'
+        title='Original Position'
         data-clicked={ isLocationClicked }
         onClick={ () => {
           setIsLocationClicked(true)

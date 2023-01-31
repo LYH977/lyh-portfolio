@@ -18,6 +18,11 @@ body,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+video {
+  height: auto;
+  max-height: 500px;
+}
+
 button {
   font-family: inherit;
 }
@@ -454,7 +459,7 @@ ul > li {
 
 .modal-content {
   max-width: 800px;
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: auto;
   background-color: #062374;
   margin: 1rem;
@@ -517,7 +522,7 @@ ul > li {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
-  &:nth-child(3) {
+  &:last-child {
     margin-left: auto;
   }
   &[data-clicked='false']::before {

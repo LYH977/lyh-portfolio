@@ -70,11 +70,9 @@ export const InfoMarkup = (
       <p>Zoom in and out</p>
 
       { deviceType !== 'mouseOnly' && (<><p>
-        2 fingers slide gesture (mobile)
+        2 fingers slide gesture
       </p>
         <p>Move camera around</p></>) }
-
-
     </div>
     { isMacOS() && (
       <p>
