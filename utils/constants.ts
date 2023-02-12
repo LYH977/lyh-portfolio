@@ -9,12 +9,15 @@ export const FLOOR_COLOR = new Color(0x021036)
 export const NEON_COLOR = new Color(0xf3ffff)
 
 export const MODEL_PATH = {
-  PRIMARY: '/glb/primary.glb',
-  // PRIMARY: 'C:/Users/FORGE-15/Desktop/lyh-portfolio/public/glb/primary.glb',
-  AOT: '/glb/aot.glb',
-  NARUTO: '/glb/naruto.glb',
-  MALAYSIA: '/glb/malaysia.glb',
-  SYDNEY: '/glb/sydney.glb',
+  PRIMARY:
+    'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Fprimary.glb?alt=media&token=ec1c9626-f443-453d-b7bb-6af4028ff8be',
+  AOT: 'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Faot.glb?alt=media&token=f26e0daf-17d0-4df6-9bc4-7e47e76ee8ae',
+  NARUTO:
+    'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Fnaruto.glb?alt=media&token=fa33e072-8d10-4c17-b758-d5441bd3f75f',
+  MALAYSIA:
+    'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Fmalaysia.glb?alt=media&token=6c3f0a5c-341e-4929-8032-611338cc3138',
+  SYDNEY:
+    'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Fsydney.glb?alt=media&token=558c7f08-6a06-4e60-9239-b55bd00cc82f',
 }
 export const DEFAUL_AZIMUTHAL_ANGLE = -0.02729855431768572
 

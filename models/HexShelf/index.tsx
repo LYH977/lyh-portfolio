@@ -24,8 +24,7 @@ export default function HexShelf({ ...props }: any) {
 
   return (
     <group dispose={ null } { ...props }>
-      <SecondaryModels
-      />
+      <SecondaryModels />
 
       <group rotation={ [-Math.PI / 2, 0, 0] }>
         <group scale={ 0.02 }>
