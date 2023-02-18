@@ -18,12 +18,8 @@ export const Tooltips = () => {
     if (isAllSet) openModal(TutorialMarkup)
   }, [isAllSet])
 
-
   return (
-    <div
-      className={ `tooltips-container${true ? ' tooltips-container-slidedown' : ''
-        }` }
-    >
+    <>
       <button
         className='tooltip'
         title='List of credits'
@@ -61,9 +57,15 @@ export const Tooltips = () => {
         onClick={ () => {
           setIsLocationClicked(true)
           defaultAngleCallback()
-        } }>
-        <Image src='/location.png' alt='Back to original position.' height={ 35 } width={ 35 } />
+        } }
+      >
+        <Image
+          src='/location.png'
+          alt='Back to original position.'
+          height={ 35 }
+          width={ 35 }
+        />
       </button>
-    </div>
+    </>
   )
 }

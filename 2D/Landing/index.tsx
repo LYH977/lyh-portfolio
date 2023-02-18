@@ -19,6 +19,7 @@ const Landing = (props: any) => {
 
         <div className='intro'>
           <h1 className={ `${isAnimating ? 'h1-anim' : ''}` }>Presented by</h1>
+          <p style={ { display: 'none' } }>Lee Yuan Hooi</p>
           <div
             className={ `logo-container${isAnimating ? ' logo-container-anim' : ''
               }` }

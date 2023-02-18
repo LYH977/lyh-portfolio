@@ -1,7 +1,4 @@
 import { Bounds } from '@react-three/drei'
-
-
-
 import { angleToRadians } from '../utils/formatter'
 import Light from './viewAngle/Light'
 import Wall from './primary/Wall'
@@ -28,8 +25,6 @@ export default function Room(props: any) {
       <Bounds clip observe margin={ 1.5 } damping={ 6 }>
         <RectShelf />
       </Bounds>
-      <RectShelf />
-
       <Bounds clip observe margin={ 1.2 } damping={ 6 }>
         <Zoomable description={ LYHMarkup }>
           { (meshRef: any) => (

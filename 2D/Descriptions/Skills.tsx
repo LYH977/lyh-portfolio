@@ -21,6 +21,7 @@ export const SkillsMarkup = (
         <li>Material UI</li>
         <li>Styled Component</li>
         <li>Bootstrap</li>
+        <li>Tailwind</li>
         <li>ThreeJS</li>
         <li>UI/UX</li>
         <li>Firebase</li>

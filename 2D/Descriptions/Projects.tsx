@@ -1,7 +1,22 @@
+import RedirectIcon from "../Components/RedirectIcon";
+
 export const ProjectsMarkup = (
   <>
     <h1>Projects & Experience</h1>
     <ul className="project-list">
+      <li><a target='_blank' href="https://anime-search-nextjs.vercel.app/">Revamped Anime Search App</a><RedirectIcon /></li>
+      <ul className="custom-list-item">
+        <li>Built on NextJS, Typescript, Tailwind CSS, React Query</li>
+        <li>Implemented Server Side Rendering (SSR), Server Side Generation (SSG) and Client Side Rendering (CSR)</li>
+        <li>SSR initial anime homepage for complete initial HTML content and then change the contents with CSR for native-like content switching and caching.</li>
+        <li>Anime detail pages are pre-rendered on demand with SSG for fast fetching speed with complete initial HTML content</li>
+        <li>Implemented silky smooth dark mode transition</li>
+        <li>Used performant variable font</li>
+        <li>Used organized and scalable folder structure (with separation of concerns)</li>
+
+      </ul>
+
+
       <li>3D Portfolio Website</li>
       <ul className="custom-list-item">
         <li>My Personal Frontend Website</li>
