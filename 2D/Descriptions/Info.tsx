@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { isMacOS } from '../../utils/checker'
 import {
   deviceType,
@@ -44,13 +43,13 @@ export const InfoMarkup = (
     <div className='grid-container'>
 
       <p>
-        <Image src='/location.png' alt='location.' height={ 30 } width={ 30 } />{ ' ' }
+        <img src='/location.png' alt='location.' height={ 30 } width={ 30 } />{ ' ' }
         icon
       </p>
       <p>Back to default position</p>
 
       <p>
-        <Image
+        <img
           src='/love.png'
           alt='hand holding love.'
           height={ 30 }

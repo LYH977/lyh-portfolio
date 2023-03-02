@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useStore } from '../../store'
 import { CreditsMarkup } from '../Descriptions/Credits'
 import { InfoMarkup } from '../Descriptions/Info'
-import Image from 'next/image'
 import { TutorialMarkup } from '../Descriptions/Tutorial'
 
 export const Tooltips = () => {
@@ -27,7 +26,7 @@ export const Tooltips = () => {
           openModal(CreditsMarkup)
         } }
       >
-        <Image src='/love.png' alt='List of credits.' height={ 30 } width={ 30 } />
+        <img src='/love.png' alt='List of credits.' height={ 30 } width={ 30 } />
       </button>
       <button
         className='tooltip'
@@ -36,7 +35,7 @@ export const Tooltips = () => {
           openModal(TutorialMarkup)
         } }
       >
-        <Image src='/tutorial.png' alt='Tutorial.' height={ 30 } width={ 30 } />
+        <img src='/tutorial.png' alt='Tutorial.' height={ 30 } width={ 30 } />
       </button>
       <button
         className='tooltip'
@@ -47,7 +46,7 @@ export const Tooltips = () => {
           openModal(InfoMarkup)
         } }
       >
-        <Image src='/info.png' alt='User manual.' height={ 30 } width={ 30 } />
+        <img src='/info.png' alt='User manual.' height={ 30 } width={ 30 } />
       </button>
 
       <button
@@ -59,7 +58,7 @@ export const Tooltips = () => {
           defaultAngleCallback()
         } }
       >
-        <Image
+        <img
           src='/location.png'
           alt='Back to original position.'
           height={ 35 }
