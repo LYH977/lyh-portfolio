@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lee Yuan Hooi</title>
+        <title>Lee Yuan Hooi - React Developer</title>
         <meta name={ TITLE } content={ META_TITLE }></meta>
         <meta name={ `${OG}:${TITLE}` } content={ META_TITLE }></meta>
         <meta property={ `${OG}:${TITLE}` } content={ META_TITLE }></meta>
