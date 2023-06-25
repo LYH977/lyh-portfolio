@@ -1,5 +1,7 @@
 import { Color } from 'three/src/math/Color.js'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 export const FLOOR_WIDTH = 8
 export const FLOOR_HEIGHT = 8
 
@@ -8,7 +10,7 @@ export const Y_OFFSET = -1
 export const FLOOR_COLOR = new Color(0x021036)
 export const NEON_COLOR = new Color(0xf3ffff)
 
-export const MODEL_PATH = {
+const REMOTE_MODEL_PATH = {
   PRIMARY:
     'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Fprimary.glb?alt=media&token=ec1c9626-f443-453d-b7bb-6af4028ff8be',
   AOT: 'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Faot.glb?alt=media&token=f26e0daf-17d0-4df6-9bc4-7e47e76ee8ae',
@@ -19,6 +21,16 @@ export const MODEL_PATH = {
   SYDNEY:
     'https://firebasestorage.googleapis.com/v0/b/lyh-portfolio.appspot.com/o/glb%2Fsydney.glb?alt=media&token=558c7f08-6a06-4e60-9239-b55bd00cc82f',
 }
+const LOCAL_MODEL_PATH = {
+  PRIMARY: '/glb/primary.glb',
+  AOT: '/glb/aot.glb',
+  NARUTO: '/glb/naruto.glb',
+  MALAYSIA: '/glb/malaysia.glb',
+  SYDNEY: '/glb/sydney.glb',
+}
+
+export const MODEL_PATH = isProduction ? REMOTE_MODEL_PATH : LOCAL_MODEL_PATH
+
 export const DEFAUL_AZIMUTHAL_ANGLE = -0.02729855431768572
 
 export const CEILING_PATTERNS = {
