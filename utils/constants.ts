@@ -29,7 +29,16 @@ const LOCAL_MODEL_PATH = {
   SYDNEY: '/glb/sydney.glb',
 }
 
-export const MODEL_PATH = isProduction ? REMOTE_MODEL_PATH : LOCAL_MODEL_PATH
+const PUBLIC_PATH = {
+  PRIMARY: '/primary.glb',
+  AOT: '/aot.glb',
+  NARUTO: '/naruto.glb',
+  MALAYSIA: '/malaysia.glb',
+  SYDNEY: '/sydney.glb',
+}
+
+// export const MODEL_PATH = isProduction ? REMOTE_MODEL_PATH : LOCAL_MODEL_PATH
+export const MODEL_PATH = PUBLIC_PATH
 
 export const DEFAUL_AZIMUTHAL_ANGLE = -0.02729855431768572
 
